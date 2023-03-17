@@ -16,5 +16,10 @@ namespace LAB1
         {
             InitializeComponent();
         }
+
+        private void Lab1_Bai5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

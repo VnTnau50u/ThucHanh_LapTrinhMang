@@ -61,8 +61,8 @@ namespace LAB1
                 {
                     int count = 0;
                     string s = textBox1.Text.Trim();
-                    for (int i = 0; i < s.Length; i++) 
-                        if (s[i] > 'f' || (s[i] > 'F' && s[i] < 'a') || (s[i] > '9' && s[i] < 'A') || s[i] < '0') 
+                    for (int i = 0; i < s.Length; i++)
+                        if (s[i] > 'f' || (s[i] > 'F' && s[i] < 'a') || (s[i] > '9' && s[i] < 'A') || s[i] < '0')
                             count++;
                     if (count > 0) MessageBox.Show("Vui long nhap so hop le!", "ERROR!");
                     else
@@ -98,6 +98,16 @@ namespace LAB1
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

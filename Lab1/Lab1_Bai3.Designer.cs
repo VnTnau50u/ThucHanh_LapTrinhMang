@@ -40,26 +40,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 38);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(30, 62);
             label1.Name = "label1";
-            label1.Size = new Size(166, 20);
+            label1.Size = new Size(189, 21);
             label1.TabIndex = 0;
             label1.Text = "Nhập vào số từ 0 đến 9:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(55, 161);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(30, 118);
             label2.Name = "label2";
-            label2.Size = new Size(63, 20);
+            label2.Size = new Size(72, 21);
             label2.TabIndex = 1;
             label2.Text = "Kết quả:";
             // 
             // button_calc
             // 
-            button_calc.Location = new Point(399, 33);
+            button_calc.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_calc.Location = new Point(374, 63);
+            button_calc.Margin = new Padding(3, 2, 3, 2);
             button_calc.Name = "button_calc";
-            button_calc.Size = new Size(94, 29);
+            button_calc.Size = new Size(82, 22);
             button_calc.TabIndex = 2;
             button_calc.Text = "Đọc";
             button_calc.UseVisualStyleBackColor = true;
@@ -67,9 +71,11 @@
             // 
             // button_del
             // 
-            button_del.Location = new Point(399, 157);
+            button_del.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_del.Location = new Point(374, 122);
+            button_del.Margin = new Padding(3, 2, 3, 2);
             button_del.Name = "button_del";
-            button_del.Size = new Size(94, 29);
+            button_del.Size = new Size(82, 22);
             button_del.TabIndex = 3;
             button_del.Text = "Xóa";
             button_del.UseVisualStyleBackColor = true;
@@ -77,9 +83,11 @@
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(427, 242);
+            button_exit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_exit.Location = new Point(374, 182);
+            button_exit.Margin = new Padding(3, 2, 3, 2);
             button_exit.Name = "button_exit";
-            button_exit.Size = new Size(94, 29);
+            button_exit.Size = new Size(82, 22);
             button_exit.TabIndex = 4;
             button_exit.Text = "Thoát ";
             button_exit.UseVisualStyleBackColor = true;
@@ -88,26 +96,28 @@
             // textBox1
             // 
             textBox1.AcceptsTab = true;
-            textBox1.Location = new Point(184, 158);
+            textBox1.Location = new Point(246, 120);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(110, 23);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(184, 35);
+            textBox2.Location = new Point(246, 62);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(110, 23);
             textBox2.TabIndex = 6;
             // 
             // Lab1_Bai3
             // 
             AcceptButton = button_calc;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = button_exit;
-            ClientSize = new Size(533, 283);
+            ClientSize = new Size(466, 212);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button_exit);
@@ -115,6 +125,7 @@
             Controls.Add(button_calc);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Lab1_Bai3";
             Text = "Lab1_Bai3";
             ResumeLayout(false);

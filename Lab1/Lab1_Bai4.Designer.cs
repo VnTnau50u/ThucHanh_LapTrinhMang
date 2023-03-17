@@ -50,9 +50,10 @@
             comboBox1.ForeColor = SystemColors.WindowText;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Binary", "Decimal", "Hexadecimal" });
-            comboBox1.Location = new Point(292, 109);
+            comboBox1.Location = new Point(184, 137);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
+            comboBox1.Size = new Size(155, 23);
             comboBox1.TabIndex = 0;
             comboBox1.Tag = "";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -62,20 +63,21 @@
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Binary", "Decimal", "Hexadecimal" });
-            comboBox2.Location = new Point(497, 109);
+            comboBox2.Location = new Point(438, 137);
+            comboBox2.Margin = new Padding(3, 2, 3, 2);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
+            comboBox2.Size = new Size(133, 23);
             comboBox2.TabIndex = 1;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(12, 9);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(135, 25);
             label1.Name = "label1";
-            label1.Size = new Size(277, 28);
+            label1.Size = new Size(370, 37);
             label1.TabIndex = 2;
             label1.Text = "CONVERT TO HEX, DEC, BIN";
             label1.Click += label1_Click;
@@ -83,45 +85,50 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 66);
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(12, 94);
             label2.Name = "label2";
-            label2.Size = new Size(274, 20);
+            label2.Size = new Size(281, 19);
             label2.TabIndex = 3;
             label2.Text = "Nhập một số (bỏ các tiền tố \"0x\", \"0b\") :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(240, 112);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(114, 140);
             label3.Name = "label3";
-            label3.Size = new Size(46, 20);
+            label3.Size = new Size(38, 15);
             label3.TabIndex = 4;
             label3.Text = "Chọn:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(387, 130);
+            label4.Location = new Point(339, 98);
             label4.Name = "label4";
-            label4.Size = new Size(0, 20);
+            label4.Size = new Size(0, 15);
             label4.TabIndex = 5;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(107, 238);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(114, 224);
             label5.Name = "label5";
-            label5.Size = new Size(67, 20);
+            label5.Size = new Size(56, 15);
             label5.TabIndex = 6;
             label5.Text = "Kết quả: ";
+            label5.Click += label5_Click;
             // 
             // button_calc
             // 
             button_calc.BackColor = SystemColors.ActiveCaptionText;
             button_calc.ForeColor = SystemColors.ButtonFace;
-            button_calc.Location = new Point(292, 184);
+            button_calc.Location = new Point(114, 181);
+            button_calc.Margin = new Padding(3, 2, 3, 2);
             button_calc.Name = "button_calc";
-            button_calc.Size = new Size(356, 36);
+            button_calc.Size = new Size(359, 27);
             button_calc.TabIndex = 7;
             button_calc.Text = "Thực hiện";
             button_calc.UseVisualStyleBackColor = false;
@@ -129,23 +136,29 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(292, 63);
+            textBox1.Location = new Point(303, 93);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(356, 27);
+            textBox1.Size = new Size(268, 23);
             textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(292, 235);
+            textBox2.Location = new Point(246, 221);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(356, 27);
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(325, 23);
             textBox2.TabIndex = 9;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(570, 350);
+            button_exit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_exit.Location = new Point(489, 253);
+            button_exit.Margin = new Padding(3, 2, 3, 2);
             button_exit.Name = "button_exit";
-            button_exit.Size = new Size(94, 29);
+            button_exit.Size = new Size(82, 22);
             button_exit.TabIndex = 11;
             button_exit.Text = "Thoát";
             button_exit.UseVisualStyleBackColor = true;
@@ -153,9 +166,11 @@
             // 
             // button_del
             // 
-            button_del.Location = new Point(157, 188);
+            button_del.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_del.Location = new Point(489, 183);
+            button_del.Margin = new Padding(3, 2, 3, 2);
             button_del.Name = "button_del";
-            button_del.Size = new Size(94, 29);
+            button_del.Size = new Size(82, 22);
             button_del.TabIndex = 12;
             button_del.Text = "Xóa";
             button_del.UseVisualStyleBackColor = true;
@@ -164,19 +179,20 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(449, 112);
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(369, 140);
             label6.Name = "label6";
-            label6.Size = new Size(42, 20);
+            label6.Size = new Size(34, 15);
             label6.TabIndex = 13;
             label6.Text = "Sang";
             // 
             // Lab1_Bai4
             // 
             AcceptButton = button_calc;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = button_exit;
-            ClientSize = new Size(666, 382);
+            ClientSize = new Size(583, 286);
             Controls.Add(label6);
             Controls.Add(button_del);
             Controls.Add(button_exit);
@@ -190,6 +206,7 @@
             Controls.Add(label1);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Lab1_Bai4";
             Text = "Lab1_Bai4";
             Load += Lab1_Bai4_Load;

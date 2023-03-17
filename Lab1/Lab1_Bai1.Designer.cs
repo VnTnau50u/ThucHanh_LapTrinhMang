@@ -43,10 +43,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.5F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(18, 7);
+            label1.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(12, 21);
             label1.Name = "label1";
-            label1.Size = new Size(205, 17);
+            label1.Size = new Size(378, 31);
             label1.TabIndex = 0;
             label1.Text = "TÍNH TỔNG 2 SÔ NGUYÊN";
             label1.Click += label1_Click;
@@ -54,20 +55,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(8, 48);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(80, 70);
             label2.Name = "label2";
-            label2.Size = new Size(59, 13);
+            label2.Size = new Size(95, 20);
             label2.TabIndex = 1;
             label2.Text = "Nhập số 1:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(7, 82);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(80, 112);
             label3.Name = "label3";
-            label3.Size = new Size(59, 13);
+            label3.Size = new Size(95, 20);
             label3.TabIndex = 2;
             label3.Text = "Nhập số 2:";
             label3.Click += label3_Click;
@@ -75,30 +76,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(18, 172);
+            label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(92, 202);
             label4.Name = "label4";
-            label4.Size = new Size(35, 13);
+            label4.Size = new Size(50, 17);
             label4.TabIndex = 3;
             label4.Text = "Tổng:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(157, 44);
+            textBox1.Location = new Point(239, 71);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(88, 23);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(157, 77);
+            textBox2.Location = new Point(239, 113);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(88, 23);
             textBox2.TabIndex = 5;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(157, 168);
+            textBox3.Location = new Point(239, 200);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(88, 23);
@@ -106,8 +107,8 @@
             // 
             // button_del
             // 
-            button_del.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            button_del.Location = new Point(18, 126);
+            button_del.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            button_del.Location = new Point(92, 162);
             button_del.Name = "button_del";
             button_del.Size = new Size(66, 22);
             button_del.TabIndex = 7;
@@ -117,8 +118,8 @@
             // 
             // button_sum
             // 
-            button_sum.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            button_sum.Location = new Point(157, 126);
+            button_sum.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            button_sum.Location = new Point(249, 162);
             button_sum.Name = "button_sum";
             button_sum.Size = new Size(66, 22);
             button_sum.TabIndex = 8;
@@ -128,8 +129,8 @@
             // 
             // button_exit
             // 
-            button_exit.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            button_exit.Location = new Point(191, 216);
+            button_exit.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            button_exit.Location = new Point(317, 229);
             button_exit.Name = "button_exit";
             button_exit.Size = new Size(66, 22);
             button_exit.TabIndex = 9;
@@ -143,7 +144,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = button_exit;
-            ClientSize = new Size(257, 239);
+            ClientSize = new Size(395, 263);
             Controls.Add(button_exit);
             Controls.Add(button_sum);
             Controls.Add(button_del);

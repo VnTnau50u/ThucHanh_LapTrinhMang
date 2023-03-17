@@ -47,9 +47,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 76);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(12, 82);
             label1.Name = "label1";
-            label1.Size = new Size(67, 20);
+            label1.Size = new Size(57, 15);
             label1.TabIndex = 0;
             label1.Text = "Số thứ 1:";
             label1.Click += label1_Click;
@@ -57,9 +58,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(251, 76);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(220, 82);
             label2.Name = "label2";
-            label2.Size = new Size(67, 20);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 1;
             label2.Text = "Số thứ 2:";
             label2.Click += label2_Click;
@@ -67,73 +69,83 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(492, 76);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(435, 82);
             label3.Name = "label3";
-            label3.Size = new Size(67, 20);
+            label3.Size = new Size(57, 15);
             label3.TabIndex = 2;
             label3.Text = "Số thứ 3:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(8, 212);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(92, 165);
             label4.Name = "label4";
-            label4.Size = new Size(91, 20);
+            label4.Size = new Size(76, 15);
             label4.TabIndex = 3;
             label4.Text = "Số lớn nhất: ";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(457, 212);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(329, 165);
             label5.Name = "label5";
-            label5.Size = new Size(83, 20);
+            label5.Size = new Size(69, 15);
             label5.TabIndex = 4;
             label5.Text = "Số bé nhất:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(85, 73);
+            textBox1.Location = new Point(92, 79);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(110, 23);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(324, 73);
+            textBox2.Location = new Point(288, 79);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(110, 23);
             textBox2.TabIndex = 6;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(565, 73);
+            textBox3.Location = new Point(494, 79);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(110, 23);
             textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(105, 209);
+            textBox4.Location = new Point(181, 160);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
-            textBox4.Size = new Size(125, 27);
+            textBox4.Size = new Size(110, 23);
             textBox4.TabIndex = 8;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(546, 209);
+            textBox5.Location = new Point(404, 160);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(125, 27);
+            textBox5.Size = new Size(110, 23);
             textBox5.TabIndex = 9;
             // 
             // button_del
             // 
-            button_del.Location = new Point(207, 160);
+            button_del.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_del.Location = new Point(181, 120);
+            button_del.Margin = new Padding(3, 2, 3, 2);
             button_del.Name = "button_del";
-            button_del.Size = new Size(94, 29);
+            button_del.Size = new Size(82, 22);
             button_del.TabIndex = 10;
             button_del.Text = "Xóa";
             button_del.UseVisualStyleBackColor = true;
@@ -141,9 +153,11 @@
             // 
             // button_calc
             // 
-            button_calc.Location = new Point(407, 160);
+            button_calc.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button_calc.Location = new Point(356, 120);
+            button_calc.Margin = new Padding(3, 2, 3, 2);
             button_calc.Name = "button_calc";
-            button_calc.Size = new Size(94, 29);
+            button_calc.Size = new Size(82, 22);
             button_calc.TabIndex = 11;
             button_calc.Text = "Tính";
             button_calc.UseVisualStyleBackColor = true;
@@ -151,9 +165,10 @@
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(596, 265);
+            button_exit.Location = new Point(520, 196);
+            button_exit.Margin = new Padding(3, 2, 3, 2);
             button_exit.Name = "button_exit";
-            button_exit.Size = new Size(94, 29);
+            button_exit.Size = new Size(82, 22);
             button_exit.TabIndex = 12;
             button_exit.Text = "Thoát";
             button_exit.UseVisualStyleBackColor = true;
@@ -162,20 +177,21 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(290, 9);
+            label6.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Red;
+            label6.Location = new Point(217, 24);
             label6.Name = "label6";
-            label6.Size = new Size(158, 30);
+            label6.Size = new Size(208, 37);
             label6.TabIndex = 13;
             label6.Text = "TÌM MIN MAX ";
             // 
             // Lab1_Bai2
             // 
             AcceptButton = button_calc;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = button_exit;
-            ClientSize = new Size(702, 305);
+            ClientSize = new Size(614, 229);
             Controls.Add(label6);
             Controls.Add(button_exit);
             Controls.Add(button_calc);
@@ -190,6 +206,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Lab1_Bai2";
             Text = "Lab1_Bai2";
             Load += Lab1_Bai2_Load;
