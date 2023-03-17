@@ -83,6 +83,8 @@ namespace LAB1
         private void button_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Lab1_main lab1_main = new Lab1_main();
+            lab1_main.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

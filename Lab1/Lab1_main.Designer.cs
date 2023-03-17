@@ -34,6 +34,7 @@
             button4 = new Button();
             button5 = new Button();
             label1 = new Label();
+            button_exit = new Button();
             SuspendLayout();
             // 
             // button1
@@ -96,11 +97,22 @@
             label1.TabIndex = 5;
             label1.Text = "Chọn 1 bài tập: ";
             // 
+            // button_exit
+            // 
+            button_exit.Location = new Point(449, 347);
+            button_exit.Name = "button_exit";
+            button_exit.Size = new Size(94, 29);
+            button_exit.TabIndex = 6;
+            button_exit.Text = "Thoát ";
+            button_exit.UseVisualStyleBackColor = true;
+            button_exit.Click += button_exit_Click;
+            // 
             // Lab1_main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(545, 379);
+            Controls.Add(button_exit);
             Controls.Add(label1);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -121,5 +133,6 @@
         private Button button4;
         private Button button5;
         private Label label1;
+        private Button button_exit;
     }
 }

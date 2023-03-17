@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LAB1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,7 +58,9 @@ namespace Lab1
 
         private void button_exit_Click(object sender, EventArgs e)
         {
+            Lab1_main lab1_main = new Lab1_main();
             this.Close();
+            lab1_main.Show();
         }
     }
 }
