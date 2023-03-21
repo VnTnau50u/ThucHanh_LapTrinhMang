@@ -12,6 +12,8 @@ namespace LAB1
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Lab1_main());
+            Application.ExitThread();
+            Application.Exit();
         }
     }
 }

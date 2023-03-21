@@ -30,7 +30,7 @@
         {
             fontDialog1 = new FontDialog();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            groupBox1 = new GroupBox();
+            ResultBox = new GroupBox();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -51,15 +51,15 @@
             textBox7 = new TextBox();
             SuspendLayout();
             // 
-            // groupBox1
+            // ResultBox
             // 
-            groupBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(12, 112);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(572, 101);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Danh sách môn học và điểm";
+            ResultBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            ResultBox.Location = new Point(12, 112);
+            ResultBox.Name = "ResultBox";
+            ResultBox.Size = new Size(572, 101);
+            ResultBox.TabIndex = 0;
+            ResultBox.TabStop = false;
+            ResultBox.Text = "Danh sách môn học và điểm";
             // 
             // label1
             // 
@@ -98,6 +98,7 @@
             button_calc.TabIndex = 4;
             button_calc.Text = "Xuat";
             button_calc.UseVisualStyleBackColor = true;
+            button_calc.Click += button_calc_Click;
             // 
             // label3
             // 
@@ -168,6 +169,7 @@
             button_del.TabIndex = 11;
             button_del.Text = "Xoa";
             button_del.UseVisualStyleBackColor = true;
+            button_del.Click += button_del_Click;
             // 
             // button_exit
             // 
@@ -178,6 +180,7 @@
             button_exit.TabIndex = 12;
             button_exit.Text = "Thoat";
             button_exit.UseVisualStyleBackColor = true;
+            button_exit.Click += button_exit_Click;
             // 
             // textBox2
             // 
@@ -244,11 +247,10 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(groupBox1);
+            Controls.Add(ResultBox);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Lab1_Bai5";
             Text = "Lab1_Bai5";
-            Load += Lab1_Bai5_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,7 +260,7 @@
         private FontDialog fontDialog1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button button1;
-        private GroupBox groupBox1;
+        private GroupBox ResultBox;
         private Label label1;
         private Label label2;
         private TextBox textBox1;
