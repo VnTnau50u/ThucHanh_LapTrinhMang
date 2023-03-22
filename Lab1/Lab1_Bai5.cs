@@ -21,6 +21,8 @@ namespace LAB1
         private void button_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Lab1_main lab1_main = new Lab1_main();
+            lab1_main.Show();
         }
 
         private void button_del_Click(object sender, EventArgs e)
@@ -58,9 +60,9 @@ namespace LAB1
             {
                 avg += score[i];
             }
-            result[0] = avg / (score.Length-1); //avg
-            result[1] = score[0];   //min
-            result[2] = score[score.Length - 1]; //max 
+            result[0] = avg / (score.Length); //avg
+            result[2] = score[0];   //min
+            result[1] = score[score.Length - 1]; //max 
             return result;
         }
         private void button_calc_Click(object sender, EventArgs e)
@@ -68,10 +70,10 @@ namespace LAB1
             try
             {
                 string[] info = textBox1.Text.Split('\u002C');
-                double[] score = new double[info.Length - 1];
+                double[] score = new double[info.Length];
                 for (int i = 0; i < score.Length; i++)
                 {
-                    score[i] = double.Parse(info[i + 1]);
+                    score[i] = double.Parse(info[i]);
                 }
                 ScoreCheck(score);
                 double[] result = ScoreCalculate(score);
@@ -100,10 +102,10 @@ namespace LAB1
         }
         public string infoToString(string[] info)
         {
-            string result ="";
+            string result = "";
             for (int i = 0; i < info.Length; i++)
             {
-                result += $"Môn {i+1} : {info[i]}\r\n";
+                result += $"Môn {i + 1} : {info[i]}\r\n";
             }
             return result;
         }
@@ -123,6 +125,11 @@ namespace LAB1
                 }
             }
             return DauRot;
-        }     
+        }
+
+        private void ResultBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
