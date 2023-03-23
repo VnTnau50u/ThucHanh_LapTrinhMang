@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            GroupBox ResultBox;
             fontDialog1 = new FontDialog();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             label1 = new Label();
@@ -49,21 +48,8 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
-            ResultBox = new GroupBox();
+            resultBox = new GroupBox();
             SuspendLayout();
-            // 
-            // ResultBox
-            // 
-            ResultBox.Anchor = AnchorStyles.None;
-            ResultBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            ResultBox.Location = new Point(84, 168);
-            ResultBox.Margin = new Padding(3, 4, 3, 4);
-            ResultBox.Name = "ResultBox";
-            ResultBox.Padding = new Padding(3, 4, 3, 4);
-            ResultBox.Size = new Size(583, 116);
-            ResultBox.TabIndex = 0;
-            ResultBox.TabStop = false;
-            ResultBox.Enter += ResultBox_Enter;
             // 
             // label1
             // 
@@ -200,7 +186,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(501, 300);
+            textBox3.Location = new Point(517, 300);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(114, 27);
@@ -216,7 +202,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(501, 347);
+            textBox5.Location = new Point(517, 348);
             textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(114, 27);
@@ -232,17 +218,28 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(501, 400);
+            textBox7.Location = new Point(517, 400);
             textBox7.Margin = new Padding(3, 4, 3, 4);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(114, 27);
             textBox7.TabIndex = 18;
+            // 
+            // resultBox
+            // 
+            resultBox.Location = new Point(12, 143);
+            resultBox.Name = "resultBox";
+            resultBox.Padding = new Padding(10);
+            resultBox.Size = new Size(655, 125);
+            resultBox.TabIndex = 19;
+            resultBox.TabStop = false;
+            resultBox.Text = "Danh sách điểm";
             // 
             // Lab1_Bai5
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
+            Controls.Add(resultBox);
             Controls.Add(textBox7);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
@@ -261,7 +258,6 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(ResultBox);
             Name = "Lab1_Bai5";
             Text = "Lab1_Bai5";
             ResumeLayout(false);
@@ -273,7 +269,6 @@
         private FontDialog fontDialog1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button button1;
-        private GroupBox ResultBox;
         private Label label1;
         private Label label2;
         private TextBox textBox1;
@@ -292,5 +287,6 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
+        private GroupBox resultBox;
     }
 }

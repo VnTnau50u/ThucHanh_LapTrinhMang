@@ -34,7 +34,7 @@ namespace LAB1
             textBox5.Clear();
             textBox6.Clear();
             textBox7.Clear();
-            ResultBox.Text = string.Empty;
+            resultBox.Text = string.Empty;
 
         }
         public class scoreException : Exception
@@ -65,6 +65,53 @@ namespace LAB1
             result[1] = score[score.Length - 1]; //max 
             return result;
         }
+        public string rating(double[] score, double avg)
+        {
+            string rate = "";
+            bool lessThan6_5 = false;
+            bool lessThan5 = false;
+            bool lessThan3_5 = false;
+            bool lessThan2 = false;
+
+            foreach (double i in score)
+            {
+                if (i < 6.5) { lessThan6_5 = true; }
+                if (i < 5) { lessThan5 = true; }
+                if (i < 3.5) { lessThan3_5 = true; }
+                if (i < 2) { lessThan2 = true; }
+            }
+
+            if (avg >= 8 && !lessThan6_5)
+            {
+                rate = "Excelent";
+            }
+            else if (avg >= 6.5 && !lessThan5)
+            {
+                rate = "Good";
+            }
+            else if (avg >= 5 && !lessThan3_5)
+            {
+                rate = "Fair";
+            }
+            else if (avg >= 3.5 && !lessThan2)
+            {
+                rate = "Poor";
+            }
+            else
+            {
+                rate = "Very Poor";
+            }
+            return rate;
+        }
+        public string infoToString(string[] info)
+        {
+            string result = "";
+            for (int i = 0; i < info.Length; i++)
+            {
+                result += $"Môn {i + 1} : {info[i]}\r\n";
+            }
+            return result;
+        }
         private void button_calc_Click(object sender, EventArgs e)
         {
             try
@@ -80,10 +127,11 @@ namespace LAB1
                 textBox2.Text = string.Format("{0:0.00}", result[0]);
                 textBox4.Text = result[1].ToString();
                 textBox5.Text = result[2].ToString();
-                ResultBox.Text = infoToString(info);
-                int[] DauRotCount = passCheck(score);
+                resultBox.Text = infoToString(info);
+                double[] DauRotCount = passCheck(score);
                 textBox6.Text = DauRotCount[0].ToString();
                 textBox7.Text = DauRotCount[1].ToString();
+                textBox3.Text = rating(score, result[0]);
 
 
             }
@@ -93,26 +141,20 @@ namespace LAB1
             }
             catch (scoreException ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        public string infoToString(string[] info)
-        {
-            string result = "";
-            for (int i = 0; i < info.Length; i++)
-            {
-                result += $"Môn {i + 1} : {info[i]}\r\n";
-            }
-            return result;
-        }
 
-        public int[] passCheck(double[] score)
+
+        public double[] passCheck(double[] score)
         {
-            int[] DauRot = new int[2];
+            double[] DauRot = new double[2];
+            DauRot[0] = 0;
+            DauRot[1] = 0;
             for (int i = 0; i < score.Length; i++)
             {
                 if (score[i] >= 5)
@@ -127,7 +169,7 @@ namespace LAB1
             return DauRot;
         }
 
-        private void ResultBox_Enter(object sender, EventArgs e)
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }
