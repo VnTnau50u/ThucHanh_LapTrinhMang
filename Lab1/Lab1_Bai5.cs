@@ -34,8 +34,7 @@ namespace LAB1
             textBox5.Clear();
             textBox6.Clear();
             textBox7.Clear();
-            resultBox.Text = string.Empty;
-
+            richTextBox1.Text = "";
         }
         public class scoreException : Exception
         {
@@ -103,15 +102,6 @@ namespace LAB1
             }
             return rate;
         }
-        public string infoToString(string[] info)
-        {
-            string result = "";
-            for (int i = 0; i < info.Length; i++)
-            {
-                result += $"Môn {i + 1} : {info[i]}\r\n";
-            }
-            return result;
-        }
         private void button_calc_Click(object sender, EventArgs e)
         {
             try
@@ -127,8 +117,14 @@ namespace LAB1
                 textBox2.Text = string.Format("{0:0.00}", result[0]);
                 textBox4.Text = result[1].ToString();
                 textBox5.Text = result[2].ToString();
-                resultBox.Text = infoToString(info);
                 double[] DauRotCount = passCheck(score);
+                int k = 1;
+                foreach (string s in info)
+                {
+                    richTextBox1.AppendText("Môn " + k + " : " + s + " \t\t"); // append each string and a space to the RichTextBox control
+                    if (k % 4 == 0) richTextBox1.AppendText("\n");
+                    k++;
+                }
                 textBox6.Text = DauRotCount[0].ToString();
                 textBox7.Text = DauRotCount[1].ToString();
                 textBox3.Text = rating(score, result[0]);
@@ -167,11 +163,6 @@ namespace LAB1
                 }
             }
             return DauRot;
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
