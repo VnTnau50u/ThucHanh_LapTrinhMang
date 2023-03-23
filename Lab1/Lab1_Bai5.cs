@@ -82,23 +82,23 @@ namespace LAB1
 
             if (avg >= 8 && !lessThan6_5)
             {
-                rate = "Excelent";
+                rate = "Giỏi";
             }
             else if (avg >= 6.5 && !lessThan5)
             {
-                rate = "Good";
+                rate = "Khá";
             }
             else if (avg >= 5 && !lessThan3_5)
             {
-                rate = "Fair";
+                rate = "Trung Bình";
             }
             else if (avg >= 3.5 && !lessThan2)
             {
-                rate = "Poor";
+                rate = "Yếu";
             }
             else
             {
-                rate = "Very Poor";
+                rate = "Kém";
             }
             return rate;
         }
