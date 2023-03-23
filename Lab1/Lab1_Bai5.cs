@@ -121,15 +121,13 @@ namespace LAB1
                 int k = 1;
                 foreach (string s in info)
                 {
-                    richTextBox1.AppendText("Môn " + k + " : " + s + " \t\t"); // append each string and a space to the RichTextBox control
+                    richTextBox1.AppendText("Môn " + k + ": " + s + " \t"); // append each string and a space to the RichTextBox control
                     if (k % 4 == 0) richTextBox1.AppendText("\n");
                     k++;
                 }
                 textBox6.Text = DauRotCount[0].ToString();
                 textBox7.Text = DauRotCount[1].ToString();
                 textBox3.Text = rating(score, result[0]);
-
-
             }
             catch (FormatException)
             {
