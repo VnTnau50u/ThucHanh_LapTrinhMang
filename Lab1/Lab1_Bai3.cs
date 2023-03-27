@@ -12,6 +12,58 @@ namespace LAB1
 {
     public partial class Lab1_Bai3 : Form
     {
+        public static string DocSo4ChuSo(int so)
+        {
+            string[] donVi = { "", "mươi", "trăm", "nghìn" };
+            string[] soLe = { "", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
+            string[] soChan = { "", "mười", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
+
+            string ketQua = "";
+
+            int dv = so % 10; // lấy chữ số đơn vị
+            int chuc = (so / 10) % 10; // lấy chữ số chục
+            int tram = (so / 100) % 10; // lấy chữ số trăm
+            int ngan = (so / 1000) % 10; // lấy chữ số nghìn
+
+            if (ngan > 0)
+            {
+                ketQua += $"{soLe[ngan]} {donVi[3]} ";
+            }
+
+            if (tram > 0)
+            {
+                ketQua += $"{soLe[tram]} {donVi[2]} ";
+            }
+            if (ngan > 0 && tram == 0 && (chuc!= 0 || dv != 0))
+            {
+                ketQua += "không trăm ";
+                if (chuc == 0) ketQua += "lẻ ";
+            }
+
+            if (chuc > 0)
+            {
+                if (chuc == 1)
+                {
+                    ketQua += $"{soChan[chuc]} ";
+                }
+                else
+                {
+                    ketQua += $"{soChan[chuc]} {donVi[1]} ";
+                }
+            }
+
+            if (dv > 0)
+            {
+                if (chuc == 0 && tram != 0)
+                {
+                    ketQua += "lẻ ";
+                }
+
+                ketQua += $"{soLe[dv]}";
+            }
+
+            return ketQua.Trim();
+        }
         public Lab1_Bai3()
         {
             InitializeComponent();
@@ -21,41 +73,9 @@ namespace LAB1
         {
             int num;
             bool Success = int.TryParse(textBox2.Text, out num);
-            if (Success && num >= 0 && num <= 9)
+            if (Success && num >= 0)
             {
-                switch (num)
-                {
-                    case 0:
-                        textBox1.Text = "Không";
-                        break;
-                    case 1:
-                        textBox1.Text = "Một";
-                        break;
-                    case 2:
-                        textBox1.Text = "Hai";
-                        break;
-                    case 3:
-                        textBox1.Text = "Ba";
-                        break;
-                    case 4:
-                        textBox1.Text = "Bốn";
-                        break;
-                    case 5:
-                        textBox1.Text = "Năm";
-                        break;
-                    case 6:
-                        textBox1.Text = "Sáu";
-                        break;
-                    case 7:
-                        textBox1.Text = "Bảy";
-                        break;
-                    case 8:
-                        textBox1.Text = "Tám";
-                        break;
-                    case 9:
-                        textBox1.Text = "Chín";
-                        break;
-                }
+                textBox1.Text = DocSo4ChuSo(num);
             }
             else
             {

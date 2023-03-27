@@ -43,9 +43,9 @@
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(30, 62);
             label1.Name = "label1";
-            label1.Size = new Size(189, 21);
+            label1.Size = new Size(81, 21);
             label1.TabIndex = 0;
-            label1.Text = "Nhập vào số từ 0 đến 9:";
+            label1.Text = "Nhập số :";
             // 
             // label2
             // 
@@ -96,19 +96,19 @@
             // textBox1
             // 
             textBox1.AcceptsTab = true;
-            textBox1.Location = new Point(246, 120);
+            textBox1.Location = new Point(147, 120);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(110, 23);
+            textBox1.Size = new Size(209, 23);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(246, 62);
+            textBox2.Location = new Point(147, 62);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(110, 23);
+            textBox2.Size = new Size(209, 23);
             textBox2.TabIndex = 6;
             // 
             // Lab1_Bai3
