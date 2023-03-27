@@ -61,6 +61,10 @@ namespace LAB1
 
                 ketQua += $"{soLe[dv]}";
             }
+            if (dv == 0 && (ngan == 0 && tram == 0 & chuc == 0))
+            {
+                ketQua += "Không";
+            }
 
             return ketQua.Trim();
         }
