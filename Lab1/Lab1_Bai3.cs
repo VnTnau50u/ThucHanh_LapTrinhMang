@@ -54,12 +54,16 @@ namespace LAB1
 
             if (dv > 0)
             {
-                if (chuc == 0 && tram != 0)
+                if (chuc > 1 && dv == 1) ketQua += "mốt";
+                else
                 {
-                    ketQua += "lẻ ";
-                }
+                    if (chuc == 0 && tram != 0)
+                    {
+                        ketQua += "lẻ ";
+                    }
 
-                ketQua += $"{soLe[dv]}";
+                    ketQua += $"{soLe[dv]}";
+                }
             }
             if (dv == 0 && (ngan == 0 && tram == 0 & chuc == 0))
             {
