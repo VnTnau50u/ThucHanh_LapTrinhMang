@@ -83,7 +83,7 @@ namespace LAB1
             }
             else
             {
-                MessageBox.Show("Vui long nhap so tu 0 den 9", "ERROR!");
+                MessageBox.Show("Vui long nhap so hop le (0 <= x <= 9999", "ERROR!");
             }
         }
 
