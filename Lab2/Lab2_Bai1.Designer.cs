@@ -71,6 +71,7 @@
             Controls.Add(richTextBox1);
             Name = "Lab2_Bai1";
             Text = "Lab2_Bai1";
+            Load += Lab2_Bai1_Load;
             ResumeLayout(false);
         }
 

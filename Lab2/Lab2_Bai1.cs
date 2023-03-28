@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Lab2
 {
@@ -24,6 +25,7 @@ namespace Lab2
             FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(fs);
             richTextBox1.Text = sr.ReadToEnd();
+            sr.Close();
             fs.Close();
         }
 
@@ -31,10 +33,16 @@ namespace Lab2
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
-            FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
-            StreamWriter sr = File(fs);
-            sr.WriteLine(richTextBox1.Text);
+            FileStream fs = new FileStream(ofd.FileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.Write(richTextBox1.Text);
+            sw.Close();
             fs.Close();
+        }
+
+        private void Lab2_Bai1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
