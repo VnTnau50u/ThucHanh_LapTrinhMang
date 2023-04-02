@@ -21,10 +21,12 @@ namespace Lab2
         private void ReadFile_Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            FileStream fs = new FileStream(ofd.FileName, FileMode.Create);
+            FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
             ofd.ShowDialog();
             textBox1.Text = ofd.SafeFileName.ToString();
-            textBox2.Text = fs.Name.ToString();
+            textBox2.Text = fs.SafeFileHandle.ToString();
+            fs.Close();
+
         }
     }
 }
