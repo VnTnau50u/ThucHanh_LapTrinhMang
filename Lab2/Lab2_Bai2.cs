@@ -29,6 +29,7 @@ namespace Lab2
             textBox1.Text = ofd.SafeFileName.ToString();
             content = content.Replace("\r\n", "\r");
             textBox3.Text = richTextBox1.Lines.Count().ToString();
+            textBox4.Text = (richTextBox1.Text.Count(c => c == ' ')+1).ToString();
             string[] source = content.Split(new char[] { '.', '?', '!', ' ', ',', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
             textBox5.Text = source.Count().ToString();
  
@@ -39,6 +40,8 @@ namespace Lab2
 
         private void button_Exit_Click(object sender, EventArgs e)
         {
+            main main = new main();
+            main.Show();
             this.Close();
         }
     }
