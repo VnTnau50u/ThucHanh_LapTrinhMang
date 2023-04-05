@@ -18,15 +18,6 @@ namespace Lab2
         {
             InitializeComponent();
         }
-        private int DemSoDong(StreamReader sr)
-        {
-            int lineCount = 0;
-            while (sr.ReadLine() != null)
-            {
-                lineCount++;
-            }
-            return lineCount;
-        }
         private int countLine(StreamReader sr)
         {
             int lineCount = 0;
