@@ -47,8 +47,6 @@ namespace Lab2
 
         private void button3_Click(object sender, EventArgs e)
         {          
-            main main = new main();
-            main.Show();
             this.Close();
         }
     }

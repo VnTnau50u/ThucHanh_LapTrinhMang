@@ -39,9 +39,9 @@ namespace Lab2
                 var content = sr.ReadToEnd();
                 sr.BaseStream.Position = 0;
                 textBox3.Text = countLine(sr).ToString();
-                textBox4.Text = content.Length.ToString();
-                string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-                textBox5.Text = source.Count().ToString();
+                string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\r', '\n' ,'\0','+','-','*','/'}, StringSplitOptions.RemoveEmptyEntries);
+                textBox4.Text = source.Count().ToString();
+                textBox5.Text = source.Length.ToString();
                 richTextBox1.Text = content;
                 fs.Close();
                 sr.Close();
@@ -49,8 +49,6 @@ namespace Lab2
 
         private void button_Exit_Click(object sender, EventArgs e)
         {
-            main main = new main();
-            main.Show();
             this.Close();
         }
     }
