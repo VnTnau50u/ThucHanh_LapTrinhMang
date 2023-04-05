@@ -21,12 +21,25 @@ namespace Lab2
         private void ReadFile_Button_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
             ofd.ShowDialog();
+            FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
+            StreamReader sr = new StreamReader(fs);
+            string content = sr.ReadToEnd();
+            richTextBox1.Text = content;
             textBox1.Text = ofd.SafeFileName.ToString();
-            textBox2.Text = fs.SafeFileHandle.ToString();
+            content = content.Replace("\r\n", "\r");
+            textBox3.Text = richTextBox1.Lines.Count().ToString();
+            string[] source = content.Split(new char[] { '.', '?', '!', ' ', ',', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            textBox5.Text = source.Count().ToString();
+ 
+            
             fs.Close();
 
+        }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

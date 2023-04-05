@@ -40,6 +40,7 @@
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            button_Exit = new Button();
             SuspendLayout();
             // 
             // ReadFile_Button
@@ -101,7 +102,7 @@
             // 
             richTextBox1.Location = new Point(293, 49);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(485, 381);
+            richTextBox1.Size = new Size(481, 349);
             richTextBox1.TabIndex = 6;
             richTextBox1.Text = "";
             // 
@@ -140,11 +141,22 @@
             textBox5.Size = new Size(100, 23);
             textBox5.TabIndex = 11;
             // 
+            // button_Exit
+            // 
+            button_Exit.Location = new Point(699, 415);
+            button_Exit.Name = "button_Exit";
+            button_Exit.Size = new Size(75, 23);
+            button_Exit.TabIndex = 12;
+            button_Exit.Text = "Thoát";
+            button_Exit.UseVisualStyleBackColor = true;
+            button_Exit.Click += button_Exit_Click;
+            // 
             // Lab2_Bai2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button_Exit);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
@@ -177,5 +189,6 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private Button button_Exit;
     }
 }
