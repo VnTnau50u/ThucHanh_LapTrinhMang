@@ -27,11 +27,17 @@ namespace Lab2
             }
             return lineCount;
         }
-        private void ReadFile_Button_Click(object sender, EventArgs e)
+        private int countLine(StreamReader sr)
         {
-
-            try
+            int lineCount = 0;
+            while (sr.ReadLine() != null)
             {
+                lineCount++;
+            }
+            return lineCount;
+        }
+        private void ReadFile_Button_Click(object sender, EventArgs e)
+        {        
                 OpenFileDialog ofd = new OpenFileDialog();
                 ofd.Filter = "Txt Files|*.txt";
                 ofd.ShowDialog();
@@ -41,21 +47,13 @@ namespace Lab2
                 textBox2.Text = fs.Name.ToString();
                 var content = sr.ReadToEnd();
                 sr.BaseStream.Position = 0;
-                textBox3.Text = DemSoDong(sr).ToString();
+                textBox3.Text = countLine(sr).ToString();
                 textBox4.Text = content.Length.ToString();
-
                 string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-
                 textBox5.Text = source.Count().ToString();
                 richTextBox1.Text = content;
                 fs.Close();
                 sr.Close();
-            }
-            catch (Exception er)
-            {
-
-                MessageBox.Show(er.Message);
-            }
         }
 
         private void button_Exit_Click(object sender, EventArgs e)
