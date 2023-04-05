@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,25 +18,44 @@ namespace Lab2
         {
             InitializeComponent();
         }
-
+        private int DemSoDong(StreamReader sr)
+        {
+            int lineCount = 0;
+            while (sr.ReadLine() != null)
+            {
+                lineCount++;
+            }
+            return lineCount;
+        }
         private void ReadFile_Button_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.ShowDialog();
-            FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
-            StreamReader sr = new StreamReader(fs);
-            string content = sr.ReadToEnd();
-            richTextBox1.Text = content;
-            textBox1.Text = ofd.SafeFileName.ToString();
-            content = content.Replace("\r\n", "\r");
-            textBox3.Text = richTextBox1.Lines.Count().ToString();
-            textBox4.Text = (richTextBox1.Text.Count(c => c == ' ')+1).ToString();
-            string[] source = content.Split(new char[] { '.', '?', '!', ' ', ',', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
-            textBox5.Text = source.Count().ToString();
- 
-            
-            fs.Close();
 
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Txt Files|*.txt";
+                ofd.ShowDialog();
+                FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
+                StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+                textBox1.Text = ofd.SafeFileName.ToString();
+                textBox2.Text = fs.Name.ToString();
+                var content = sr.ReadToEnd();
+                sr.BaseStream.Position = 0;
+                textBox3.Text = DemSoDong(sr).ToString();
+                textBox4.Text = content.Length.ToString();
+
+                string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+                textBox5.Text = source.Count().ToString();
+                richTextBox1.Text = content;
+                fs.Close();
+                sr.Close();
+            }
+            catch (Exception er)
+            {
+
+                MessageBox.Show(er.Message);
+            }
         }
 
         private void button_Exit_Click(object sender, EventArgs e)

@@ -33,6 +33,7 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            button_Exit = new Button();
             SuspendLayout();
             // 
             // button1
@@ -90,11 +91,22 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // button_Exit
+            // 
+            button_Exit.Location = new Point(613, 257);
+            button_Exit.Name = "button_Exit";
+            button_Exit.Size = new Size(75, 23);
+            button_Exit.TabIndex = 5;
+            button_Exit.Text = "Thoat";
+            button_Exit.UseVisualStyleBackColor = true;
+            button_Exit.Click += button_Exit_Click;
+            // 
             // main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 288);
+            Controls.Add(button_Exit);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -113,5 +125,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private Button button_Exit;
     }
 }

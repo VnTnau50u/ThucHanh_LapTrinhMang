@@ -41,5 +41,10 @@ namespace Lab2
             Lab2_Bai5 lab2_Bai5 = new Lab2_Bai5();
             lab2_Bai5.Show();
         }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
