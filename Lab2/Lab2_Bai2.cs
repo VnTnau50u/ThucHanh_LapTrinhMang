@@ -20,12 +20,12 @@ namespace Lab2
         }
         private int countLine(StreamReader sr)
         {
-            int lineCount = 0;
+            int cnt = 0;
             while (sr.ReadLine() != null)
             {
-                lineCount++;
+                cnt++;
             }
-            return lineCount;
+            return cnt;
         }
         private void ReadFile_Button_Click(object sender, EventArgs e)
         {        
