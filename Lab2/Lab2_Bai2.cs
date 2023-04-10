@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Lab2
 {
@@ -40,11 +41,18 @@ namespace Lab2
                 StreamReader sr = new StreamReader(fs);
                 string content = sr.ReadToEnd();
                 richTextBox1.Text = content;
+                int countLine = richTextBox1.Lines.Count();
                 textBox1.Text = ofd.SafeFileName.ToString();
                 textBox2.Text = fs.Name.ToString();
-                content = content.Replace("\r\n", "\r");
-                int countChar = content.Length;
-                int countLine = richTextBox1.Lines.Count();
+                content = content.Replace("\r\n","\r");
+                int countChar = 0;
+                foreach (char ky_tu in content)
+                {
+                    if (ky_tu != ' '&&ky_tu != '\r')
+                    {
+                        countChar++;
+                    }
+                }
                 content = content.Replace('\r', ' ');
                 string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
                 int countWord = source.Count();
