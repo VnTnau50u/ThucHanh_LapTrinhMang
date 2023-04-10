@@ -136,12 +136,10 @@ namespace Lab2
                     else
                     if (Lines[i].Contains('/'))
                     {
-                        var calc = Lines[i].Split('/');
-                        float res = 1;
-                        for (int j = 0; j < calc.Length; j++)
-                        {
-                            res /= float.Parse(calc[j]);
-                        }
+                        string[] calc = Lines[i].Split('/');
+                        int d1 = int.Parse(calc[0].Trim());
+                        int d2 = int.Parse(calc[1].Trim());
+                        int res = d1 / d2;
                         Lines[i] = Lines[i] + " = " + res.ToString();
                     }
                 }
