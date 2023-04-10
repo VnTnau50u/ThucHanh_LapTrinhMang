@@ -121,7 +121,6 @@ namespace Lab2
                         }
                         Lines[i] = temp + " = " + res.ToString();
                     }
-
                     else
                     if (Lines[i].Contains('*'))
                     {

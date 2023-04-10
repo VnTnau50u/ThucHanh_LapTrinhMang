@@ -52,7 +52,6 @@ namespace Lab2
                     item.SubItems.Add(kichthuoc);
                     item.SubItems.Add(DuoiMoRong);
                     item.SubItems.Add(NgayTao);
-
                 }
             }
         }

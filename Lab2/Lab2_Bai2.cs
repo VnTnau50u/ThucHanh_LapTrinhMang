@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Lab2
 {
@@ -28,23 +29,38 @@ namespace Lab2
             return cnt;
         }
         private void ReadFile_Button_Click(object sender, EventArgs e)
-        {        
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "Txt Files|*.txt";
-                ofd.ShowDialog();
-                FileStream fs = new FileStream(ofd.FileName, FileMode.OpenOrCreate);
-                StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "|*.txt";
+            ofd.ValidateNames = true;
+            ofd.Multiselect = false;
+            ofd.ShowDialog();
+            if (ofd.FileName != "")
+            {
+                FileStream fs = new FileStream(ofd.FileName, FileMode.Open);
+                StreamReader sr = new StreamReader(fs);
+                string content = sr.ReadToEnd();
+                richTextBox1.Text = content;
+                int countLine = richTextBox1.Lines.Count();
                 textBox1.Text = ofd.SafeFileName.ToString();
                 textBox2.Text = fs.Name.ToString();
-                var content = sr.ReadToEnd();
-                sr.BaseStream.Position = 0;
-                textBox3.Text = countLine(sr).ToString();
-                string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\r', '\n' ,'\0','+','-','*','/'}, StringSplitOptions.RemoveEmptyEntries);
-                textBox4.Text = source.Count().ToString();
-                textBox5.Text = source.Length.ToString();
-                richTextBox1.Text = content;
+                content = content.Replace("\r\n","\r");
+                int countChar = 0;
+                foreach (char ky_tu in content)
+                {
+                    if (ky_tu != ' '&&ky_tu != '\r')
+                    {
+                        countChar++;
+                    }
+                }
+                content = content.Replace('\r', ' ');
+                string[] source = content.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                int countWord = source.Count();
+                textBox3.Text = countLine.ToString();
+                textBox4.Text = countWord.ToString();
+                textBox5.Text = countChar.ToString();
                 fs.Close();
-                sr.Close();
+            }
         }
 
         private void button_Exit_Click(object sender, EventArgs e)
