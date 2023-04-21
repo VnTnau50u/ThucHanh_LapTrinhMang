@@ -57,10 +57,10 @@ namespace lab3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 116);
+            this.ClientSize = new System.Drawing.Size(210, 115);
             this.Controls.Add(this.OpenClient);
             this.Controls.Add(this.OpenTCPServer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormBai3";
             this.Text = "Lab03-Bai3";
             this.Load += new System.EventHandler(this.FormBai3_Load);

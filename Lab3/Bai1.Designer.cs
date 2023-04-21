@@ -37,7 +37,7 @@ namespace lab3
             // btnB1Server
             // 
             this.btnB1Server.Location = new System.Drawing.Point(28, 24);
-            this.btnB1Server.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnB1Server.Margin = new System.Windows.Forms.Padding(2);
             this.btnB1Server.Name = "btnB1Server";
             this.btnB1Server.Size = new System.Drawing.Size(80, 21);
             this.btnB1Server.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace lab3
             // btnB1Client
             // 
             this.btnB1Client.Location = new System.Drawing.Point(146, 23);
-            this.btnB1Client.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnB1Client.Margin = new System.Windows.Forms.Padding(2);
             this.btnB1Client.Name = "btnB1Client";
             this.btnB1Client.Size = new System.Drawing.Size(82, 23);
             this.btnB1Client.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace lab3
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(199, 59);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(47, 19);
             this.btnExit.TabIndex = 2;
@@ -75,9 +75,9 @@ namespace lab3
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnB1Client);
             this.Controls.Add(this.btnB1Server);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormBai1";
-            this.Text = "&";
+            this.Text = "Lab3-Bai1";
             this.Load += new System.EventHandler(this.FormBai1_Load);
             this.ResumeLayout(false);
 

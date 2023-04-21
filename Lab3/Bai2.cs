@@ -41,6 +41,7 @@ namespace lab3
                 do
                 {
                     bytesRecv = clientSocket.Receive(recv);
+                    if (Encoding.ASCII.GetString(recv) == "exit\n") listenerSocket.Close();
                     text += Encoding.ASCII.GetString(recv);
                 }
                 while (text[text.Length - 1] != '\n');

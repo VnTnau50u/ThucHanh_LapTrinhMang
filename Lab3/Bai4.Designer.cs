@@ -36,10 +36,10 @@ namespace lab3
             // btnB4ChatClient
             // 
             this.btnB4ChatClient.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB4ChatClient.Location = new System.Drawing.Point(159, 11);
-            this.btnB4ChatClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnB4ChatClient.Location = new System.Drawing.Point(119, 9);
+            this.btnB4ChatClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnB4ChatClient.Name = "btnB4ChatClient";
-            this.btnB4ChatClient.Size = new System.Drawing.Size(141, 47);
+            this.btnB4ChatClient.Size = new System.Drawing.Size(106, 38);
             this.btnB4ChatClient.TabIndex = 5;
             this.btnB4ChatClient.Text = "Client";
             this.btnB4ChatClient.UseVisualStyleBackColor = true;
@@ -48,10 +48,10 @@ namespace lab3
             // btnB4ChatServer
             // 
             this.btnB4ChatServer.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB4ChatServer.Location = new System.Drawing.Point(12, 11);
-            this.btnB4ChatServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnB4ChatServer.Location = new System.Drawing.Point(9, 9);
+            this.btnB4ChatServer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnB4ChatServer.Name = "btnB4ChatServer";
-            this.btnB4ChatServer.Size = new System.Drawing.Size(141, 47);
+            this.btnB4ChatServer.Size = new System.Drawing.Size(106, 38);
             this.btnB4ChatServer.TabIndex = 4;
             this.btnB4ChatServer.Text = "Server";
             this.btnB4ChatServer.UseVisualStyleBackColor = true;
@@ -59,12 +59,12 @@ namespace lab3
             // 
             // FormBai4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 89);
+            this.ClientSize = new System.Drawing.Size(231, 54);
             this.Controls.Add(this.btnB4ChatClient);
             this.Controls.Add(this.btnB4ChatServer);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormBai4";
             this.Text = "Lab03-Bai4";
             this.Load += new System.EventHandler(this.FormBai4_Load);

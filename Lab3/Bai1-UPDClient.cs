@@ -41,5 +41,10 @@ namespace lab3
         {
             this.Close();
         }
+
+        private void Lab3B1UDPClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
