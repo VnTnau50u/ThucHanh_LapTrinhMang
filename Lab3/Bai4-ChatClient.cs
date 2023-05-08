@@ -62,7 +62,7 @@ namespace lab3
 
                     if (text == "server quit")
                     {
-                        byte[] data = System.Text.Encoding.UTF8.GetBytes(tbClientName.Text + ": quit");
+                        byte[] data = System.Text.Encoding.UTF8.GetBytes(tbClientName.Text + ": left chat room");
                         SendData("quit because server stop listenning");
                         tcpClient.Close();
                         this.Dispose();
@@ -99,7 +99,7 @@ namespace lab3
             {
                 if (tcpClient != null)
                 {
-                    byte[] data = System.Text.Encoding.UTF8.GetBytes(tbClientName.Text + ": quit");
+                    byte[] data = System.Text.Encoding.UTF8.GetBytes(tbClientName.Text + ": left chat room");
                     ns = tcpClient.GetStream();
                     ns.Write(data, 0, data.Length);
                     ns.Close();

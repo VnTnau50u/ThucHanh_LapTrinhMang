@@ -63,7 +63,7 @@ namespace lab3
                 {
                     Socket clientSocket = listenerSocket.Accept();
                     ListClient.Add(clientSocket);
-                    SendData("Message From Server: Hi, Welcome to My Room Chat!", clientSocket);
+                    SendData("Message From Server: Chat room created!", clientSocket);
                     listLog.Items.Add(new ListViewItem("New Client Connected: " + clientSocket.RemoteEndPoint.ToString()));
                     Thread receiver = new Thread(() => ReceiveDataThread(clientSocket));
                     receiver.Start();

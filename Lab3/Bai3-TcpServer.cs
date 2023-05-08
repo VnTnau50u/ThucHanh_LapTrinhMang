@@ -28,12 +28,12 @@ namespace lab3
         {
             try
             {
-                listBox1.Items.Add("Server running on 127.0.0.1:8080");
+                listBox1.Items.Add("Server running on 127.0.0.1:8888");
                 int bytesReceived = 0;
                 byte[] recv = new byte[1];
                 Socket clientSocket;
-                IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080);
-                //Gan socket lang nghe toi dia chi IP cua may va port 8080
+                IPEndPoint ipepServer = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8888);
+                //Gan socket lang nghe toi dia chi IP cua may va port 8888
                 listenerSocket.Bind(ipepServer);
                 //bat dau lang nghe.Socket.Listening(int backlog) voi backlog la do dai toi da cua hang doi cac ket noi dang cho xu ly
                 listenerSocket.Listen(-1);
@@ -61,6 +61,16 @@ namespace lab3
         }
 
         private void Lab03_Bai3_TcpServer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

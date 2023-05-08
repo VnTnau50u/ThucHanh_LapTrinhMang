@@ -25,7 +25,7 @@ namespace lab3
         {
             tcpClient = new TcpClient();
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-            IPEndPoint ipEndPoint = new IPEndPoint(ipAddress,8080);
+            IPEndPoint ipEndPoint = new IPEndPoint(ipAddress,8888);
     
             tcpClient.Connect(ipEndPoint);
             ns = tcpClient.GetStream();
