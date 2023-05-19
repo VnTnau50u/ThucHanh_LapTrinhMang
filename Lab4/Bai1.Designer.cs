@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
-            richTextBox1 = new RichTextBox();
-            label1 = new Label();
+            txt_Url = new TextBox();
+            box_Response = new RichTextBox();
             SuspendLayout();
             // 
             // button1
@@ -40,41 +39,33 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "GET";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox1
+            // txt_Url
             // 
-            textBox1.Location = new Point(189, 58);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(461, 23);
-            textBox1.TabIndex = 1;
+            txt_Url.Location = new Point(40, 58);
+            txt_Url.Name = "txt_Url";
+            txt_Url.Size = new Size(587, 23);
+            txt_Url.TabIndex = 1;
+            txt_Url.Text = "http://";
             // 
-            // richTextBox1
+            // box_Response
             // 
-            richTextBox1.Location = new Point(40, 119);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(708, 319);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(89, 66);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            box_Response.Location = new Point(40, 100);
+            box_Response.Name = "box_Response";
+            box_Response.Size = new Size(708, 319);
+            box_Response.TabIndex = 2;
+            box_Response.Text = "";
             // 
             // Bai1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(richTextBox1);
-            Controls.Add(textBox1);
+            Controls.Add(box_Response);
+            Controls.Add(txt_Url);
             Controls.Add(button1);
             Name = "Bai1";
             Text = "Bai1";
@@ -86,8 +77,7 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
-        private RichTextBox richTextBox1;
-        private Label label1;
+        private TextBox txt_Url;
+        private RichTextBox box_Response;
     }
 }
