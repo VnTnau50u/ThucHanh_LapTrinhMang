@@ -28,12 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Bai3";
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            richTextBox1 = new RichTextBox();
+            button1 = new Button();
+            SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(12, 12);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(525, 27);
+            textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(12, 65);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(525, 27);
+            textBox2.TabIndex = 1;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(12, 116);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(655, 383);
+            richTextBox1.TabIndex = 2;
+            richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(573, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 3;
+            button1.Text = "Download";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // Bai3
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(687, 521);
+            Controls.Add(button1);
+            Controls.Add(richTextBox1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Name = "Bai3";
+            Text = "Bai3";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private RichTextBox richTextBox1;
+        private Button button1;
     }
 }
