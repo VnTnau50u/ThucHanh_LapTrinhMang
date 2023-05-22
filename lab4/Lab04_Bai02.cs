@@ -1,24 +1,19 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Net;
-using System.Security.Policy;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab4
+namespace lab4
 {
-    public partial class Bai2 : Form
+    public partial class Lab04_Bai02 : Form
     {
-        public Bai2()
+        public Lab04_Bai02()
         {
             InitializeComponent();
         }
+
         private string getSource(string URL)
         {
             try
@@ -74,7 +69,7 @@ namespace Lab4
                     // Read the content.
                     string responseFromServer = reader.ReadToEnd();
                     // Display the content.
-                    ResponseBox.Text = responseFromServer;
+                    rtxResponse.Text = responseFromServer;
                 }
 
                 // Close the response.
@@ -85,22 +80,34 @@ namespace Lab4
 
                 MessageBox.Show(ex.Message);
             }
-
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+  
+
+        private void btnPost_Click_1(object sender, EventArgs e)
         {
-            if (getSource(txt_Url.Text) == "URL không tồn tại!")
+            if (getSource(txtURL.Text) == "URL không tồn tại!")
             {
                 MessageBox.Show("URL không tồn tại!");
-            }
+            }           
             else
-                Post(txt_Url.Text);
+                Post(txtURL.Text);
         }
 
-        private void txt_Url_TextChanged(object sender, EventArgs e)
+  
+        private void txtContent_MouseClick(object sender, MouseEventArgs e)
         {
+            txtContent.Text = null;
+        }
 
+        private void txtURL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                btnPost.PerformClick();
+            }
         }
     }
 }

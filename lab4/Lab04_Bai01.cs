@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
-using System.Net.Http;
+using System.Net;
+using System.IO;
 using HtmlAgilityPack;
 
-namespace Lab4
+namespace lab4
 {
-    public partial class Bai1 : Form
+    public partial class Lab04_Bai01 : Form
     {
-        public Bai1()
+        public Lab04_Bai01()
         {
             InitializeComponent();
         }
@@ -60,22 +53,28 @@ namespace Lab4
                 MessageBox.Show(ex.Message);
                 return "nothing";
             }
-
+        
         }
 
-        private void Bai1_Load(object sender, EventArgs e)
+        private void btnGet_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (getSource(txt_Url.Text) == "URL không tồn tại!")
+            if (getSource(txtURL.Text) == "URL không tồn tại!")
             {
                 MessageBox.Show("URL không tồn tại!");
             }
             else
-                box_Response.Text = GetHTML(txt_Url.Text);
+                rtxResponse.Text = GetHTML(txtURL.Text);
+
+        }
+
+
+        private void txtURL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnGet.PerformClick();
+            }
         }
     }
 }
