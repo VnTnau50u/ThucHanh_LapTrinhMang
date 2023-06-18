@@ -150,5 +150,8 @@
   <ItemGroup>
     <None Include="Properties\img\10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading_2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

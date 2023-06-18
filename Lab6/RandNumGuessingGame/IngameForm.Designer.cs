@@ -40,16 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.playerNum = new System.Windows.Forms.Label();
-            this.btnAutoPlaySingleTurn = new System.Windows.Forms.Button();
-            this.btnAutoplayWholeGame = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.range = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.luckyNumber = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +64,6 @@
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-
             // 
             // btnClear
             // 
@@ -85,7 +80,6 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-
             // 
             // btnExit
             // 
@@ -144,7 +138,6 @@
             this.btnReady.Text = "Ready!";
             this.btnReady.UseVisualStyleBackColor = false;
             this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
-
             // 
             // answer
             // 
@@ -186,19 +179,17 @@
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.White;
             this.btnSubmit.Enabled = false;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(311, 29);
+            this.btnSubmit.Location = new System.Drawing.Point(311, 28);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(76, 29);
+            this.btnSubmit.Size = new System.Drawing.Size(83, 29);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.TabStop = false;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-
             // 
             // playerNum
             // 
@@ -210,66 +201,17 @@
             this.playerNum.TabIndex = 7;
             this.playerNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAutoPlaySingleTurn
-            // 
-            this.btnAutoPlaySingleTurn.BackColor = System.Drawing.Color.White;
-            this.btnAutoPlaySingleTurn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAutoPlaySingleTurn.Enabled = false;
-            this.btnAutoPlaySingleTurn.FlatAppearance.BorderSize = 0;
-            this.btnAutoPlaySingleTurn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutoPlaySingleTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAutoPlaySingleTurn.ForeColor = System.Drawing.Color.Black;
-            this.btnAutoPlaySingleTurn.Location = new System.Drawing.Point(0, 0);
-            this.btnAutoPlaySingleTurn.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAutoPlaySingleTurn.Name = "btnAutoPlaySingleTurn";
-            this.btnAutoPlaySingleTurn.Size = new System.Drawing.Size(125, 16);
-            this.btnAutoPlaySingleTurn.TabIndex = 9;
-            this.btnAutoPlaySingleTurn.TabStop = false;
-            this.btnAutoPlaySingleTurn.Text = "Autoplay a Single Turn";
-            this.btnAutoPlaySingleTurn.UseVisualStyleBackColor = false;
-            this.btnAutoPlaySingleTurn.Click += new System.EventHandler(this.btnAutoPlaySingleTurn_Click);
-            // 
-            // btnAutoplayWholeGame
-            // 
-            this.btnAutoplayWholeGame.BackColor = System.Drawing.Color.White;
-            this.btnAutoplayWholeGame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAutoplayWholeGame.Enabled = false;
-            this.btnAutoplayWholeGame.FlatAppearance.BorderSize = 0;
-            this.btnAutoplayWholeGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutoplayWholeGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAutoplayWholeGame.ForeColor = System.Drawing.Color.Black;
-            this.btnAutoplayWholeGame.Location = new System.Drawing.Point(0, 16);
-            this.btnAutoplayWholeGame.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAutoplayWholeGame.Name = "btnAutoplayWholeGame";
-            this.btnAutoplayWholeGame.Size = new System.Drawing.Size(125, 16);
-            this.btnAutoplayWholeGame.TabIndex = 10;
-            this.btnAutoplayWholeGame.TabStop = false;
-            this.btnAutoplayWholeGame.Text = "Autoplay the Entire Game";
-            this.btnAutoplayWholeGame.UseVisualStyleBackColor = false;
-            this.btnAutoplayWholeGame.Click += new System.EventHandler(this.btnAutoplayWholeGame_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnAutoPlaySingleTurn, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAutoplayWholeGame, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(397, 28);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(125, 32);
-            this.tableLayoutPanel1.TabIndex = 8;
-            // 
             // pic1
             // 
+            this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic1.Image = global::RNGG.Properties.Resources.a;
-            this.pic1.Location = new System.Drawing.Point(12, 29);
+            this.pic1.Location = new System.Drawing.Point(12, 28);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(124, 124);
+            this.pic1.Size = new System.Drawing.Size(108, 99);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 9;
             this.pic1.TabStop = false;
+            this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
             // timer
             // 
@@ -346,14 +288,12 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "IngameForm";
             this.Text = "Anonymous";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientForm_FormClosing);
             this.Load += new System.EventHandler(this.ClientForm_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -373,9 +313,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label playerNum;
-        private System.Windows.Forms.Button btnAutoPlaySingleTurn;
-        private System.Windows.Forms.Button btnAutoplayWholeGame;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label3;

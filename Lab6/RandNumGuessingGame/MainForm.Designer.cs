@@ -44,14 +44,13 @@
             this.btnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.ForeColor = System.Drawing.Color.Black;
-            this.btnClient.Location = new System.Drawing.Point(14, 33);
+            this.btnClient.Location = new System.Drawing.Point(14, 50);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(139, 49);
             this.btnClient.TabIndex = 3;
             this.btnClient.Text = "Join an existing conversation";
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
-
             // 
             // btnExit
             // 
@@ -68,7 +67,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-
             // 
             // btnServer
             // 
@@ -77,21 +75,20 @@
             this.btnServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServer.ForeColor = System.Drawing.Color.Black;
-            this.btnServer.Location = new System.Drawing.Point(179, 104);
+            this.btnServer.Location = new System.Drawing.Point(178, 50);
             this.btnServer.Name = "btnServer";
             this.btnServer.Size = new System.Drawing.Size(139, 49);
             this.btnServer.TabIndex = 5;
             this.btnServer.Text = "Host a new conversation";
             this.btnServer.UseVisualStyleBackColor = false;
             this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
-
             // 
             // joinPort
             // 
             this.joinPort.BackColor = System.Drawing.Color.White;
             this.joinPort.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.joinPort.ForeColor = System.Drawing.Color.Black;
-            this.joinPort.Location = new System.Drawing.Point(108, 19);
+            this.joinPort.Location = new System.Drawing.Point(108, 31);
             this.joinPort.MaxLength = 5;
             this.joinPort.Name = "joinPort";
             this.joinPort.Size = new System.Drawing.Size(45, 13);
@@ -104,7 +101,7 @@
             this.joinIP.BackColor = System.Drawing.Color.White;
             this.joinIP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.joinIP.ForeColor = System.Drawing.Color.Black;
-            this.joinIP.Location = new System.Drawing.Point(14, 19);
+            this.joinIP.Location = new System.Drawing.Point(4, 31);
             this.joinIP.Name = "joinIP";
             this.joinIP.Size = new System.Drawing.Size(98, 13);
             this.joinIP.TabIndex = 1;
@@ -114,11 +111,11 @@
             // joinUsername
             // 
             this.joinUsername.BackColor = System.Drawing.Color.White;
-            this.joinUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.joinUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.joinUsername.ForeColor = System.Drawing.Color.Black;
-            this.joinUsername.Location = new System.Drawing.Point(14, 83);
+            this.joinUsername.Location = new System.Drawing.Point(14, 105);
             this.joinUsername.Name = "joinUsername";
-            this.joinUsername.Size = new System.Drawing.Size(139, 13);
+            this.joinUsername.Size = new System.Drawing.Size(139, 20);
             this.joinUsername.TabIndex = 0;
             this.joinUsername.Text = "Username";
             this.joinUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -141,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(350, 165);
+            this.ClientSize = new System.Drawing.Size(350, 133);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.hostPort);
             this.Controls.Add(this.joinUsername);

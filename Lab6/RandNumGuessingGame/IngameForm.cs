@@ -80,7 +80,7 @@ namespace RNGG
             if (ress[0] == "Server")
             {
                 isServer = true;
-                btnReady.Enabled = btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = btnClear.Enabled = label1.Enabled = false;
+                btnReady.Enabled = btnSubmit.Enabled = btnClear.Enabled = label1.Enabled = false;
                 answer.BorderStyle = BorderStyle.None;
             }
             else if (ress[0] == "@@@Ingame!@@@")
@@ -177,14 +177,14 @@ namespace RNGG
                 pic1.Image = (Image)Properties.Resources.ResourceManager.GetObject($"_{timeLeft}");
                 if (timeLeft == 0)
                 {
-                    btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = label3.Enabled = label4.Enabled = range.Enabled = luckyNumber.Enabled = false;
+                    btnSubmit.Enabled = answer.Enabled = label3.Enabled = label4.Enabled = range.Enabled = luckyNumber.Enabled = false;
                     send("@@@Timeup!@@@");
                 }
                 else if (isAuto && lastSubmitTime - timeLeft >= 3)
                     (new Thread(() => autoSubmit())).Start();
                 else if (!isAuto && lastSubmitTime - timeLeft >= 3)
                 {
-                    btnSubmit.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = true;
+                    btnSubmit.Enabled = answer.Enabled = true;
                     answer.Focus();
                     answer.Select();
                 }
@@ -225,7 +225,7 @@ namespace RNGG
             (new Thread(() => send($"s{val}"))).Start();
             lastSubmitTime = timeLeft;
             if (!this.InvokeRequired)
-                btnSubmit.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = false;
+                btnSubmit.Enabled = answer.Enabled = false;
             int index = trueVal.IndexOf(val);
             if (index != -1 && index <= valRange)
             {
@@ -242,6 +242,11 @@ namespace RNGG
             answer.Clear();
         }
 
+        private void pic1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void autoSubmit()
         {
             if (this.InvokeRequired)
@@ -251,8 +256,6 @@ namespace RNGG
                 }));
             else
             {
-                btnSubmit.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = false;
-                if (isAuto) btnAutoplayWholeGame.Enabled = false;
                 int val = rand.Next(0, valRange + 1);
                 submit(trueVal[val]);
             }
@@ -346,7 +349,7 @@ namespace RNGG
                             lastSubmitTime = 100;
                             this.Invoke(new MethodInvoker(delegate ()
                             {
-                                btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = true;
+                                btnSubmit.Enabled = answer.Enabled = true;
                                 answer.Focus();
                                 answer.Select();
                             }));
@@ -364,7 +367,7 @@ namespace RNGG
                         this.Invoke(new MethodInvoker(delegate ()
                         {
                             btnReady.Enabled = true;
-                            btnSubmit.Enabled = btnAutoplayWholeGame.Enabled = btnAutoPlaySingleTurn.Enabled = answer.Enabled = false;
+                            btnSubmit.Enabled = answer.Enabled = false;
                         }));
                         isIngame = isAuto = false;
                     }
